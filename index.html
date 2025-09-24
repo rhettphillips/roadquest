@@ -82,22 +82,22 @@ body {
 <body>
 <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
         
-                <div class="container">
-                    <div id="map"></div>
-                    <div id="infoPopup">
-                        <div class="info">
-                            <span>State:</span>
-                            <span class="info-country"></span>
-                        </div>
-                        <div class="info">
-                            <span>Population:</span>
-                            <span class="info-population"></span>
-                        </div>
-                    </div>
-                    <div class="map-legend"></div>
-                </div>
-                <script>
-        
+<div class="container">
+<div id="map"></div>
+<div id="infoPopup">
+<div class="info">
+<span>State:</span>
+<span class="info-country"></span>
+</div>
+<div class="info">
+<span>Population:</span>
+<span class="info-population"></span>
+</div>
+</div>
+<div class="map-legend"></div>
+</div>
+
+<script>
         var LINE_WIDTH_DEFAULT = 0.5;
         var LINE_WIDTH_SELECTED = 3;
         var MAP_COLORS = [
@@ -248,6 +248,6 @@ body {
             }
         });
         
-                </script>
-            </body>
-        </html>
+        </script>
+</body>
+</html>
