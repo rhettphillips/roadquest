@@ -1,84 +1,85 @@
-<!DOCTYPE html>
-        <html>
-            <head>
-                <title>GeoJSON Import</title>
-                <meta charset="utf-8">
-                <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.js"
-                crossorigin async
-                data-callback="initMapKit"
-                data-libraries="services,full-map,geojson"
-                data-token="eyJraWQiOiJCTVlHRDU0SEQ5IiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJYMjQ4NUdSMkNOIiwiaWF0IjoxNzU4NzIyMDc4LCJvcmlnaW4iOiJyaGV0dHBoaWxsaXBzLmdpdGh1Yi5pbyIsImV4cCI6MTc5ODY5NjgwMH0.6EthmEDiQ8j-3kf17XDzRcC4axnAqRqiKBrFx1wR1tueqBU9TCIb2J4T9675-S4cpgMuFRwUH2E2HFK_0dYsnw"></script>
-                <style>
+<!DOCTYPE html><html><head><meta charset="utf-8">
         
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "-apple-system-font", "HelveticaNeue-Medium", "Helvetica", "Arial", "sans-serif";
-        }
-        
-        .container {
-            position: relative;
-        }
-        
-        #map {
-            width: 100%;
-            max-width: 600px;
-            height: 600px;
-        }
-        
-        #infoPopup {
-            display: none;
-            top: 7px;
-            left: 67px;
-            background: #FFFFFF;
-            padding: 5px 15px;
-            position: absolute;
-            z-index: 1000;
-            min-width:180px;
-            font: 13px/16px "-apple-system-font", "HelveticaNeue-Medium", "Helvetica", "Arial", "sans-serif";
-            color: #212121;
-            border: 1px solid rgba(0,0,0,0.2);
-            border-radius: 3px;
-        }
-        
-        .container .map-legend {
-            position: absolute;
-            z-index: 1000;
-            top: 7px;
-            left: 7px;
-        }
-        
-        .map-legend div {
-            margin-bottom: 5px;
-            width: 40px;
-            font-size: 12px;
-            color: #fff;
-            padding: 4px 7px;
-        }
-        
-        #infoPopup .info {
-            padding: 10px 0;
-            box-sizing: border-box;
-        }
-        
-        #infoPopup .info:first-child {
-            border-bottom: 1px solid rgba(0,0,0,0.2);
-        }
-        
-        #infoPopup .info-country,  #infoPopup .info-population{
-            margin-left: 5px;
-            color: #464545;
-            font-style: italic;
-        }
-        
-                </style>
-            </head>
-            <body>
+<title>Road Quest</title>
+
+<script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js" 
+crossorigin async
+data-callback="initMapKit"
+data-libraries="services,full-map,geojson"
+data-token="eyJraWQiOiJCTVlHRDU0SEQ5IiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJYMjQ4NUdSMkNOIiwiaWF0IjoxNzU4NzIyMDc4LCJvcmlnaW4iOiJyaGV0dHBoaWxsaXBzLmdpdGh1Yi5pbyIsImV4cCI6MTc5ODY5NjgwMH0.6EthmEDiQ8j-3kf17XDzRcC4axnAqRqiKBrFx1wR1tueqBU9TCIb2J4T9675-S4cpgMuFRwUH2E2HFK_0dYsnw">
+</script>
+                    
+<style>
+
+html, body {
+height: 100%;
+overflow: hidden;
+}
+
+body {
+        margin: 0;
+        padding: 0;
+        font-family: "-apple-system-font", "HelveticaNeue-Medium", "Helvetica", "Arial", "sans-serif";
+}
+
+.container {
+        position: relative;
+}
+
+#map {
+        width: 100%;
+        max-width: 600px;
+        height: 600px;
+}
+
+#infoPopup {
+        display: none;
+        top: 7px;
+        left: 67px;
+        background: #FFFFFF;
+        padding: 5px 15px;
+        position: absolute;
+        z-index: 1000;
+        min-width:180px;
+        font: 13px/16px "-apple-system-font", "HelveticaNeue-Medium", "Helvetica", "Arial", "sans-serif";
+        color: #212121;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 3px;
+}
+
+.container .map-legend {
+        position: absolute;
+        z-index: 1000;
+        top: 7px;
+        left: 7px;
+}
+
+.map-legend div {
+        margin-bottom: 5px;
+        width: 40px;
+        font-size: 12px;
+        color: #fff;
+        padding: 4px 7px;
+}
+
+#infoPopup .info {
+        padding: 10px 0;
+        box-sizing: border-box;
+}
+
+#infoPopup .info:first-child {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#infoPopup .info-country,  #infoPopup .info-population{
+        margin-left: 5px;
+        color: #464545;
+        font-style: italic;
+}
+
+</style>
+</head>
+<body>
                 <div class="container">
                     <div id="map"></div>
                     <div id="infoPopup">
