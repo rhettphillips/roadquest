@@ -1,14 +1,14 @@
 <!DOCTYPE html><html><head><meta charset="utf-8">
         
 <title>Road Quest</title>
-
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 <script src="https://cdn.apple-mapkit.com/mk/5.x.x/mapkit.core.js" 
 crossorigin async
 data-callback="initMapKit"
 data-libraries="services,full-map,geojson"
 data-token="eyJraWQiOiJCTVlHRDU0SEQ5IiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJYMjQ4NUdSMkNOIiwiaWF0IjoxNzU4NzIyMDc4LCJvcmlnaW4iOiJyaGV0dHBoaWxsaXBzLmdpdGh1Yi5pbyIsImV4cCI6MTc5ODY5NjgwMH0.6EthmEDiQ8j-3kf17XDzRcC4axnAqRqiKBrFx1wR1tueqBU9TCIb2J4T9675-S4cpgMuFRwUH2E2HFK_0dYsnw">
 </script>
-                    
+
 <style>
 
 html, body {
@@ -80,6 +80,8 @@ body {
 </style>
 </head>
 <body>
+<h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+        
                 <div class="container">
                     <div id="map"></div>
                     <div id="infoPopup">
