@@ -13,7 +13,7 @@
             crossorigin
             async
             data-callback="initMapKit"
-            data-libraries="services,full-map,geojson"
+            data-libraries="services,full-map,overlays,annotations,geojson"
             data-token="eyJraWQiOiJCTVlHRDU0SEQ5IiwidHlwIjoiSldUIiwiYWxnIjoiRVMyNTYifQ.eyJpc3MiOiJYMjQ4NUdSMkNOIiwiaWF0IjoxNzU4NzIyMDc4LCJvcmlnaW4iOiJyaGV0dHBoaWxsaXBzLmdpdGh1Yi5pbyIsImV4cCI6MTc5ODY5NjgwMH0.6EthmEDiQ8j-3kf17XDzRcC4axnAqRqiKBrFx1wR1tueqBU9TCIb2J4T9675-S4cpgMuFRwUH2E2HFK_0dYsnw"
         ></script>
 
@@ -177,9 +177,12 @@
                     },
                 });
                 var map = new mapkit.Map("map", {
+                    isRotationAvailable: false,
                     isRotationEnabled: false,
-                    isZoomEnabled: false,
-                    showsZoomControl: false,
+                    isZoomEnabled: true,
+                    showsZoomControl: true,
+                    showsUserLocationControl: true,
+                    showsScale: true,
                 });
 
                 // Setup the UI to show a popup when a state is selected.
